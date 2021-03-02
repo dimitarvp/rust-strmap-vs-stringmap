@@ -15,7 +15,7 @@ fn test_insert_str() {
     let k2 = "/Users/somebody/3.file";
     let k3 = String::from("/home/somebody/someplace/4.file");
     let k4 = String::from("/path/to/somewhere/5.file");
-    let mut map = HashMap::<&str, usize>::new();
+    let mut map = HashMap::<&str, usize>::with_capacity(32);
     insert_str(&mut map, k0);
     insert_str(&mut map, k1);
     insert_str(&mut map, k2);
@@ -29,7 +29,7 @@ fn test_insert_string() {
     let k2 = "/Users/somebody/3.file";
     let k3 = String::from("/home/somebody/someplace/4.file");
     let k4 = String::from("/path/to/somewhere/5.file");
-    let mut map = HashMap::<String, usize>::new();
+    let mut map = HashMap::<String, usize>::with_capacity(32);
     insert_string(&mut map, k0);
     insert_string(&mut map, k1);
     insert_string(&mut map, k2);
